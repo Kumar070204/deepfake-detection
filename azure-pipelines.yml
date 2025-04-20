@@ -2,7 +2,8 @@ trigger:
   - main
 
 pool:
-  vmImage: 'ubuntu-latest'
+  name: Default   # This specifies that the job will run on the self-hosted agent pool named 'Default'
+  demands: []      # You can leave this empty, or specify demands if you need certain conditions
 
 steps:
   - task: UsePythonVersion@0
