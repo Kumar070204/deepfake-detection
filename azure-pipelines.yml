@@ -2,20 +2,20 @@ trigger:
   - main
 
 pool:
-  name: Default
-
-variables:
-  GH_TOKEN: $(GH_TOKEN)
+  name: Default  # Make sure this matches your self-hosted agent pool
 
 steps:
+  - task: UsePythonVersion@0
+    inputs:
+      versionSpec: '3.8'
+      addToPath: true
+
   - script: |
-      echo "##vso[task.setvariable variable=GH_TOKEN]$GH_TOKEN"
-      python --version
-      pip install --upgrade pip
+      python -m pip install --upgrade pip
       pip install -r requirements.txt
+    displayName: 'Install dependencies'
     env:
       GH_TOKEN: $(GH_TOKEN)
-    displayName: 'Install dependencies'
 
   - script: |
       python -m pytest --junitxml=test-results.xml || true
