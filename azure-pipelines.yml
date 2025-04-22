@@ -5,7 +5,6 @@ pool:
   name: Default
 
 steps:
-steps:
 - script: '"C:\Users\cavin\AppData\Local\Programs\Python\Python38\python.exe" -m pip install --upgrade pip'
   displayName: 'Upgrade pip'
 
