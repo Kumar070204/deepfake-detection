@@ -6,10 +6,10 @@ pool:
 
 steps:
 - script: |
-    python -m pip install --upgrade pip
-    python -m pip install -r requirements.txt
+    py -3.8 -m pip install --upgrade pip
+    py -3.8 -m pip install -r requirements.txt
   displayName: 'Install dependencies'
 
 - script: |
-    python app.py
+    py -3.8 app.py
   displayName: 'Run Flask App'
