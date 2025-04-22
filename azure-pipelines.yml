@@ -6,10 +6,10 @@ pool:
 
 steps:
 - script: |
-    py -3.8 -m pip install --upgrade pip
-    py -3.8 -m pip install -r requirements.txt
+    "C:\Users\cavin\AppData\Local\Programs\Python\Python38\python.exe" -m pip install --upgrade pip
+    "C:\Users\cavin\AppData\Local\Programs\Python\Python38\python.exe" -m pip install -r requirements.txt
   displayName: 'Install dependencies'
 
 - script: |
-    py -3.8 app.py
+    "C:\Users\cavin\AppData\Local\Programs\Python\Python38\python.exe" app.py
   displayName: 'Run Flask App'
