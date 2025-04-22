@@ -5,11 +5,11 @@ pool:
   name: Default
 
 steps:
-- script: '"C:\Users\cavin\AppData\Local\Programs\Python\Python38\python.exe" -m pip install --upgrade pip'
+- script: '"C:\Users\HOME\AppData\Local\Programs\Python\Python38\python.exe" -m pip install --upgrade pip'
   displayName: 'Upgrade pip'
 
-- script: '"C:\Users\cavin\AppData\Local\Programs\Python\Python38\python.exe" -m pip install -r requirements.txt'
+- script: '"C:\Users\HOME\AppData\Local\Programs\Python\Python38\python.exe" -m pip install -r requirements.txt'
   displayName: 'Install dependencies'
 
-- script: '"C:\Users\cavin\AppData\Local\Programs\Python\Python38\python.exe" app.py'
+- script: '"C:\Users\HOME\AppData\Local\Programs\Python\Python38\python.exe" app.py'
   displayName: 'Run Flask App'
