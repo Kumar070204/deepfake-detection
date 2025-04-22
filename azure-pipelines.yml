@@ -11,5 +11,5 @@ steps:
 - script: '"C:\Python38\python.exe" -m pip install -r requirements.txt'
   displayName: 'Install dependencies'
 
-- script: '"C:\Python38\python.exe" app.py'
-  displayName: 'Run Flask App'
+- script: '"C:\Python38\python.exe" app.py & timeout /t 10'
+  displayName: 'Run Flask App (40 sec preview)'
