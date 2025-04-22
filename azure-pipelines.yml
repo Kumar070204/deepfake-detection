@@ -1,29 +1,18 @@
 trigger:
-  - main
+- main
 
 pool:
-  name: Default  # Make sure this matches your self-hosted agent pool
+  name: Default
 
 steps:
-  - task: UsePythonVersion@0
-    inputs:
-      versionSpec: '3.8'
-      addToPath: true
+- task: UsePythonVersion@0
+  inputs:
+    versionSpec: '3.9'
 
-  - script: |
-      python -m pip install --upgrade pip
-      pip install -r requirements.txt
-    displayName: 'Install dependencies'
-    env:
-      GH_TOKEN: $(GH_TOKEN)
+- script: |
+    pip install -r requirements.txt
+  displayName: 'Install dependencies'
 
-  - script: |
-      python -m pytest --junitxml=test-results.xml || true
-    displayName: 'Run tests'
-    continueOnError: true
-
-  - task: PublishTestResults@2
-    inputs:
-      testResultsFiles: 'test-results.xml'
-      testRunTitle: 'Python Tests'
-    condition: succeededOrFailed()
+- script: |
+    python app.py
+  displayName: 'Run Flask App'
