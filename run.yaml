@@ -1,0 +1,14 @@
+trigger: none  # Manual trigger
+
+pool:
+  name: Default
+
+jobs:
+- job: RunFlaskApp
+  displayName: 'Run Flask App'
+  steps:
+  - powershell: |
+      Start-Process python "app.py"
+      Start-Sleep -Seconds 15
+      Stop-Process -Name "python" -Force
+    displayName: 'Run Flask and stop after 15s'
