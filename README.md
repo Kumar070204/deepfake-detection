@@ -1,6 +1,6 @@
 # 🎭 Deepfake Detection System
 
-![Deepfake Detection Demo](Deepfake-Detector)
+![Deepfake Detection Demo](Deepfake-Detector.jpg)
 
 A Machine Learning–based web application that detects whether an uploaded image is **Real or Deepfake** using a trained deep learning model. This system provides a simple web interface where users can upload images and receive instant predictions.
 
