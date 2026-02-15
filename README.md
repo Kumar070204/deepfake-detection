@@ -19,23 +19,14 @@ A Machine Learning–based web application that detects whether an uploaded imag
 
 ## 🛠️ Tech Stack
 
-### Machine Learning
-- Python
-- PyTorch
-- NumPy
-- PIL / OpenCV
+| Layer              | Technology                  |
+|--------------------|-----------------------------|
+| Machine Learning   | Python, PyTorch, NumPy, PIL, OpenCV |
+| Backend            | Flask                       |
+| Frontend           | HTML, CSS, JavaScript      |
+| Version Control    | Git, GitHub                |
+| CI/CD              | Azure Pipelines            |
 
-### Backend
-- Flask
-
-### Frontend
-- HTML
-- CSS
-- JavaScript
-
-### Tools
-- Git & GitHub
-- Azure Pipelines
 
 ---
 
